@@ -1,63 +1,64 @@
 " reST-specific settings
+:let g:restfts="rest"
 " em dash:
-au FileType rest :inoremap <buffer> -- —
+exe "au FileType " . g:restfts . " :inoremap <buffer> -- —"
 " en dash:
-au FileType rest :inoremap <buffer> ;- –
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;- –"
 " minus sign:
-au FileType rest :inoremap <buffer> ;m −
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;m −"
 " ellipsis:
-au FileType rest :inoremap <buffer> ;; …
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;; …"
 " open double quotation:
-au FileType rest :inoremap <buffer> ;q “
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;q “"
 " close double quotation:
-au FileType rest :inoremap <buffer> ;Q ”
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;Q ”"
 " close single quotation:
-au FileType rest :inoremap <buffer> ;' ’
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;' ’"
 " bullet dot:
-au FileType rest :inoremap <buffer> ;o •
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;o •"
 " degree symbol:
-au FileType rest :inoremap <buffer> ;0 °
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;0 °"
 " euro:
-au FileType rest :inoremap <buffer> ;e €
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;e €"
 " footnote:
-au FileType rest :inoremap <buffer> ;f \ [*]_
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;f \\ [*]_"
 " numbered footnote:
-au FileType rest :inoremap <buffer> ;n \ [#]_
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;n \\ [#]_"
 " rx sign:
-au FileType rest :inoremap <buffer> ;r ℞
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;r ℞"
 " cents:
-au FileType rest :inoremap <buffer> ;c ¢
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;c ¢"
 " pound currency:
-au FileType rest :inoremap <buffer> ;l £
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;l £"
 " therefore:
-au FileType rest :inoremap <buffer> ;t ∴
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;t ∴"
 " copyright:
-au FileType rest :inoremap <buffer> ;C ©
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;C ©"
 " registered trademark:
-au FileType rest :inoremap <buffer> ;R ®
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;R ®"
 " down arrow:
-au FileType rest :inoremap <buffer> -_ ↓
+exe "au FileType " . g:restfts . " :inoremap <buffer> -_ ↓"
 " right arrow:
-au FileType rest :inoremap <buffer> -> →
+exe "au FileType " . g:restfts . " :inoremap <buffer> -> →"
 " up arrow:
-au FileType rest :inoremap <buffer> -^ ↑
+exe "au FileType " . g:restfts . " :inoremap <buffer> -^ ↑"
 " left arrow:
-au FileType rest :inoremap <buffer> -< ←
+exe "au FileType " . g:restfts . " :inoremap <buffer> -< ←"
 " alternative en dash shortcut:
-au FileType rest :inoremap <buffer> -; –
+exe "au FileType " . g:restfts . " :inoremap <buffer> -; –"
 " alternative en dash shortcut 2:
-au FileType rest :inoremap <buffer> ;d –
-au FileType rest :set wm=0
-au FileType rest :setl colorcolumn=0
-au FileType rest :set spell
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;d –"
+exe "au FileType " . g:restfts . " :set wm=0"
+exe "au FileType " . g:restfts . " :setl colorcolumn=0"
+exe "au FileType " . g:restfts . " :set spell"
 " surround script to make e.g. yswq surround a word with curly quotes:
-au FileType rest :let b:surround_113 = "“\r”"
+exe "au FileType " . g:restfts . " :let b:surround_113 = '“\r”'"
 " surround script to make e.g. yswe surround a word with asterisks (emphasis):
-au FileType rest :let b:surround_101 = "*\r*"
+exe "au FileType " . g:restfts . " :let b:surround_101 = '*\r*'"
 " surround script to make e.g. yswl surround a word with reST link format:
-au FileType rest :let b:surround_108 = "`\r`_"
+exe "au FileType " . g:restfts . " :let b:surround_108 = '`\r`_'"
 " surround script to make e.g. ysws surround a word with double asterisks (strong):
-au FileType rest :let b:surround_115 = "**\r**"
+exe "au FileType " . g:restfts . " :let b:surround_115 = '**\r**'"
 " /reST-specific settings
 
 " Expand headings, used with header snippets.
