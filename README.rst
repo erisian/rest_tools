@@ -1,5 +1,8 @@
 reStructuredText Tools
 ======================
+:author: Tadhg O’Higgins
+:date: 2012-03-26
+
 This is a small collection of tools intended to aid in writing reStructuredText. All of the Vim functionality relies on the filetype being ``rest`` rather than the typical ``rst``.
 
 Why?
@@ -164,6 +167,14 @@ reStructuredText Surrounds
 reStructuredText Syntax
 -----------------------
 An alternative to the existing syntax files that I happen to prefer. ``conceallevel=2`` is recommended.
+
+This is a sample of how it looks with my color scheme and ``conceallevel=2``:
+
+.. image:: https://github.com/erisian/rest_tools/raw/master/syntax_conceallevel2.png
+
+This is a sample of how it looks with my color scheme and ``conceallevel=0``:
+
+.. image:: https://github.com/erisian/rest_tools/raw/master/syntax_conceallevel0.png
 
 Unicode Snippets
 ----------------
