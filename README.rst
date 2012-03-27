@@ -126,34 +126,40 @@ The easiest way to use it from Vim is simply to call it as a filter, e.g. ``:%!~
 
 reStructuredText Snippets
 -------------------------
-:``e``: ``*emphasis*``
-:``s``: ``**strong**``
-:``c``: ````code````
-:``t``: ```title```
-:``l``: ```link`_``
-:``lq``: ```“quoted link”`_``
-:``lct``: ``|substitution link|_``
-:``i``: ``+   list item``
-:``n``: ``#.  numeric list item``
-:``fn``: ``[*]_``
-:``fs``: ``..  [*]``
-:``nf``: ``[#]_``
-:``ns``: ``..  [#]``
-:``pb``: ``class:: page-break\n\n    -----\n\n``
-:``hr``: ``-----``
+======= =======================================
+``e``   ``*emphasis*``
+``s``   ``**strong**``
+``c``   ````code````
+``t``   ```title```
+``l``   ```link`_``
+``lq``  ```“quoted link”`_``
+``lct`` ``|substitution link|_``
+``i``   ``+   list item``
+``n``   ``#.  numeric list item``
+``fn``  ``[*]_``
+``fs``  ``..  [*]``
+``nf``  ``[#]_``
+``ns``  ``..  [#]``
+``pb``  ``class:: page-break\n\n    -----\n\n``
+``hr``  ``-----``
+======= =======================================
 
 In addition, ``h`` followed by one of the following characters and then ``<Tab>`` will insert as many of those characters as are on the line above: ``+=-#*:``. ``h`` followed by 1 to 6 followed by ``<Tab>`` will insert the same characters, in the order ``=-+*#:`` (this order is arbitrary; reStructuredText only cares about what order they show up in the document).
 
 reStructuredText Shortcuts
 --------------------------
-:``;f``: ``\ [*]_``
-:``;n``: ``\ [#]_``
+====== ==========
+``;f`` ``\ [*]_``
+``;n`` ``\ [#]_``
+====== ==========
 
 reStructuredText Surrounds
 --------------------------
-:``e``: Surround a word with ``*``.
-:``l``: Surround a word with ````_``.
-:``s``: Surround a word with ``**``.
+===== =============================
+``e`` Surround a word with ``*``.
+``l`` Surround a word with ````_``.
+``s`` Surround a word with ``**``.
+===== =============================
 
 reStructuredText Syntax
 -----------------------
@@ -161,41 +167,47 @@ An alternative to the existing syntax files that I happen to prefer. ``concealle
 
 Unicode Snippets
 ----------------
-:``q``: Double quotation marks: ``“”``.
-:``Q``: Single quotation marks: ``‘’``.
-:``rx``: ℞.
+====== ===============================
+``q``  Double quotation marks: ``“”``.
+``Q``  Single quotation marks: ``‘’``.
+``rx`` ℞.
+====== ===============================
 
 Unicode Shortcuts
 -----------------
 These are all insert mode shortcuts.
 
-:``--``: em dash: ``—``.
-:``;-``: en dash: ``–``.
-:``;m``: minus sign: ``−``
-:``;;``: ellipsis: ``…``
-:``;q``: open double quotation: ``“``
+====== =============================
+``--`` em dash: ``—``.
+``;-`` en dash: ``–``.
+``;m`` minus sign: ``−``
+``;;`` ellipsis: ``…``
+``;q`` open double quotation: ``“``
 
-         .. fix syntax: ”
-:``;Q``: close double quotation: ``”``
-:``;'``: close single quotation: ``’``
-:``;o``: bullet dot: ``•``
-:``;0``: degree symbol: ``°``
-:``;e``: euro: ``€``
-:``;r``: rx sign: ``℞``
-:``;c``: cents: ``¢``
-:``;l``: pound currency: ``£``
-:``;t``: therefore: ``∴``
-:``;C``: copyright: ``©``
-:``;R``: registered trademark: ``®``
-:``-_``: down arrow: ``↓``
-:``->``: right arrow: ``→``
-:``-^``: up arrow: ``↑``
-:``-<``: left arrow: ``←``
-:``-;``: em dash: ``–``
+       .. fix syntax: ”
+``;Q`` close double quotation: ``”``
+``;'`` close single quotation: ``’``
+``;o`` bullet dot: ``•``
+``;0`` degree symbol: ``°``
+``;e`` euro: ``€``
+``;r`` rx sign: ``℞``
+``;c`` cents: ``¢``
+``;l`` pound currency: ``£``
+``;t`` therefore: ``∴``
+``;C`` copyright: ``©``
+``;R`` registered trademark: ``®``
+``-_`` down arrow: ``↓``
+``->`` right arrow: ``→``
+``-^`` up arrow: ``↑``
+``-<`` left arrow: ``←``
+``-;`` em dash: ``–``
+====== =============================
 
 Unicode Surrounds
 -----------------
-:``q``: Surround a word with ``“”``.
+===== ============================
+``q`` Surround a word with ``“”``.
+===== ============================
 
 Unicode Syntax
 --------------
