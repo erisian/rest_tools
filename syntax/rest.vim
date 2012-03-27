@@ -1,8 +1,8 @@
 " reStructuredText syntax file
 " Language:	        reStructuredText
-" Maintainer:	    Tadhg O'Higgins <vimrest@tadhg.com>
-" Original Author:  Tadhg O'Higgins <vimrest@tadhg.com> 
-" Last Change:      2010 Jan 16
+" Maintainer:	    Tadhg O'Higgins <github@tadhg.com>
+" Original Author:  Tadhg O'Higgins <guthub@tadhg.com> 
+" Last Change:      2012-03-25
 
 if version < 600
   syntax clear
@@ -27,7 +27,6 @@ syn region restSubstitutionSource start=/[ ]*\.\. |[^|]\+|/ end=/$/ contains=@No
 syn match  restDirective /^[ ]*\.\.\s[A-z][A-z0-9-_]\+::/ contains=@NoSpell
 syn match  restDirectiveCodeContent /^[ ]*\.\. \(class\|container\|include\)::.*/ contains=@NoSpell
 syn region restLinkSource start=/[ ]*\.\. _.*/ end=/$/
-" syn match  restFootnote /\[#[A-z0-9_]*]_/
 syn match  restCitation /\[[A-z][A-z0-9_-]*\]_/
 syn match  restNumberFootnote /\[[0-9#]\+\]_/
 syn match  restSymbolFootnote /\[\*\]_/
@@ -40,9 +39,7 @@ syn match restListNumber /#.  /
 syn match restDefinitionTitle /^[A-z0-9]\{1\}.*\n[ ]\{4}\S\{1\}/me=e-5
 syn match restDefinitionTitle2 /^[ ]\{4\}[A-z0-9]\{1\}.*\n[ ]\{8\}\S\{1\}/me=e-9
 syn match restDefinitionTitle3 /^[ ]\{8\}[A-z0-9]\{1\}.*\n[ ]\{12\}\S\{1\}/me=e-13
-" syn match  restGridTable start=/^\s*\n\s*[+]{1}[\-+]\+[+]/ end=/^\s*[+]{1}[\-+]\+[+]\s*\n\s*\n/
 syn region restGridTable start=/\n\n\s*+[\-=]\+.*\n/ end=/\n\s*+[\-=]\+.*\n\n/ contains=restGridTableCell
-" syn region restGridTableCell start="| "ms=s+1 end="/ |\|$/"me=e-1 contains=ALLBUT,restGridTable containedin=restGridTable
 syn match restLitLine /\s*| /
 syn match  restEmDash /—/
 syn match  restEnDash /–/
@@ -93,47 +90,3 @@ highlight link restSubstitutionSource Boolean
 highlight link restSubstitutionTarget Boolean
 highlight link restSymbolFootnote Type
 highlight link restSymbolFootnoteSource Type
-
-" Make my own reST-specific groups:
-
-" highlight link restDoubleQuotes restDQ
-" highlight link restEmphasis restEm
-" highlight link restStrong restStrng
-" highlight link restInterpretedText restInterp
-" highlight link restLink restLnk
-" highlight link restParens restPrn
-" highlight link restParens2 restPrn2
-" highlight link restSubstitutionSource restSubS
-" highlight link restSubstitutionTarget restSubS
-" highlight link restSingleQuotes restSQ
-
-
-" re-link these if using tadhg.vim colors instead of tadhgsubtle.vim or
-" tadhgblues.vim
-" highlight link restSubstitutionTarget restSub
-" highlight link restEmphasis restEm
-" highlight link restStrong restStr
-" highlight link restInterpretedText restInterp
-" highlight link restLink restLnk
-" highlight link restLinkSource restLnkSrc
-" highlight link restInlineLiteral restLit
-" highlight link restSectionTitle restTitle
-" highlight link restSubstitutionSource restSubSource
-" highlight link restDirective restDir
-" highlight link restComment restComm
-" highlight link restFootnote restFnote
-" highlight link restFootnoteSource restFnoteSource
-" highlight link restCitation restCit
-" highlight link restField restFld
-" highlight link restGridTable rstGrdTbl
-" highlight link restGridTableCell rstGrdTblCell
-" highlight link restEmDash restMD
-" highlight link restEnDash restND
-" highlight link restMinusSign restMS
-" highlight link restDoubleQuotes restDQ
-" highlight link restEOL EOL
-
-" syn region mpageDatestamp start=".. container:: date"ms=s+24 end="container:: main"
-" syn region restDatestamp start="thisd\$" end="test"
-
-"highlight restDatestamp                               guifg=#000000 guibg=#ffffff gui=bold
