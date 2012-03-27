@@ -191,6 +191,7 @@ These are all insert mode shortcuts.
 ====== =============================
 ``--`` em dash: ``—``.
 ``;-`` en dash: ``–``.
+``;d`` en dash: ``–``
 ``;m`` minus sign: ``−``
 ``;;`` ellipsis: ``…``
 ``;q`` open double quotation: ``“``
@@ -211,7 +212,7 @@ These are all insert mode shortcuts.
 ``->`` right arrow: ``→``
 ``-^`` up arrow: ``↑``
 ``-<`` left arrow: ``←``
-``-;`` em dash: ``–``
+``-;`` en dash: ``–``
 ====== =============================
 
 Unicode Surrounds
