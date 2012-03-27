@@ -5,7 +5,7 @@ reStructuredText Tools
 
 This is a small collection of tools intended to aid in writing reStructuredText. All of the Vim functionality relies on the filetype being ``rest`` rather than the typical ``rst``.
 
-The |rest_get_refs.py|_ script can be used on its own, but the other parts are meant to be installed as `pathogen`_ bundles, by executing this from your ``bundles`` directory: ``git clone git://github.com/erisian/rest_tools.git rest_tools``.
+The |rest_get_refs.py|_ script can be used on its own, but the other parts are meant to be installed as a `pathogen`_ bundle, by executing this from your ``bundles`` directory: ``git clone git://github.com/erisian/rest_tools.git rest_tools``.
 
 Why?
 ----
