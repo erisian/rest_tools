@@ -1,0 +1,53 @@
+{
+    "filetypes": {
+        "blogpost": {
+            "marker": ":PostID: [",
+            "insert": ".. container:: date"
+        }
+    },
+    "patterns": [
+        {
+            "description": "Substitutions that are links.",
+            "opener": "|",
+            "closer": "|_",
+            "false_closer": "|",
+            "reference": ".. |{content}| replace:: `{content}`\n.. _{content}:",
+            "reference_start": ".. |{content}|",
+            "substitute": false
+        },
+        {
+            "description": "Substitutions.",
+            "opener": "|",
+            "closer": "|",
+            "reference": ".. |{content}| replace:: {content}",
+            "reference_start": ".. |{content}|",
+            "substitute": false
+        },
+        {
+            "description": "Links.",
+            "opener": "`",
+            "closer": "`_",
+            "false_closer": "`",
+            "reference": ".. _{content}: ",
+            "reference_start": ".. _{content}:",
+            "substitute": false
+        },
+        {
+            "description": "Footnotes.",
+            "opener": "[",
+            "closer": "]_",
+            "false_closer": "]",
+            "reference": ".. [{content}] ",
+            "reference_start": ".. [{content}]",
+            "substitute": false
+        },
+        {
+            "description": "Change tilde-delimited terms into substitutions with special roles.",
+            "opener": "~",
+            "closer": "~",
+            "reference": ".. |{content}| replace:: :specialrole:`{content}`",
+            "reference_start": ".. |{content}| ",
+            "substitute": "|{content}|"
+        }
+    ]
+}
