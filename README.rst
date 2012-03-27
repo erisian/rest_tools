@@ -5,6 +5,8 @@ reStructuredText Tools
 
 This is a small collection of tools intended to aid in writing reStructuredText. All of the Vim functionality relies on the filetype being ``rest`` rather than the typical ``rst``.
 
+The |rest_get_refs.py|_ script can be used on its own, but the other parts are meant to be installed as `pathogen`_ bundles, by executing this from your ``bundles`` directory: ``git clone git://github.com/erisian/rest_tools.git rest_tools``.
+
 Why?
 ----
 
@@ -39,34 +41,31 @@ And to add the reference definitions at the end::
     .. _“link that's quoted”: 
     .. [#] 
 
-I just filtered the file through a script.
+I just filtered the file through the |rest_get_refs.py|_ script.
 
 Components
 ----------
-``rest_get_refs.py``
+|rest_get_refs.py|_
     Goes through a reStructuredText document and looks at all link, footnote, and substitution references, then places their corresponding definitions at the end, eliminating otherwise tedious repetition.
-reStructuredText Snippets
+`reStructuredText Snippets`_
     These depend on the excellent `snipMate.vim`_ plugin, and define snippets for various common reStructuredText constructs.
-reStructuredText Shortcuts
+`reStructuredText Shortcuts`_
     These are all insert mode key combinations, primarily relying on the semi-colon as a “leader” key. For example, ``;n`` produces ``\ [#]_``.
-reStructuredText Surrounds
+`reStructuredText Surrounds`_
     These depend on the excellent `surround.vim`_ plugin, and define shortcut keys for that plugin used for common reStructuredText constructs. For example, ``yswl`` makes the current word into a reStructuredText link.
-reStructuredText Syntax
+`reStructuredText Syntax`_
     An alternative to the existing syntax files that I happen to prefer.
 
 I write all of my reStructuredText in Unicode, saving it as UTF-8, and frequently use common non-ASCII characters. The following tools are currently part of the overall reStructuredText toolkit presented here, but could theoretically be split out and used in any Unicode document format:
 
-Unicode Snippets
+`Unicode Snippets`_
     These depend on the excellent `snipMate.vim`_ plugin, and provide easier ways to type common non-ASCII characters. For example, ``q<Tab>`` wraps the cursor in curly double quotation marks.
-Unicode Shortcuts
+`Unicode Shortcuts`_
     These are all insert mode key combinations, primarily relying on the semi-colon as a “leader” key. For example, ``;e`` produces ``€``.
-Unicode Surrounds
+`Unicode Surrounds`_
     These depend on the excellent `surround.vim`_ plugin, and define shortcut keys for that plugin used for common Unicode characters. For example, ``yswq`` wraps the current word with curly double quotation marks.
-Unicode Syntax
+`Unicode Syntax`_
     My reStructuredText syntax includes highlighting for a number of non-reStructuredText syntax, including quoted text, parenthetical text, and various kinds of dashes, which has proven useful in preventing various silly errors (like forgetting to close a parenthetical aside).
-
-.. _snipMate.vim: http://www.vim.org/scripts/script.php?script_id=2540
-.. _surround.vim: https://github.com/tpope/vim-surround
 
 ``rest_get_refs.py``
 --------------------
@@ -232,3 +231,8 @@ Provides highlighting for:
 +   Sections in single quotation marks.
 +   Sections in parentheses.
 +   If Vim's ``conceal`` functionality is available, will conceal backslash-space.
+
+.. |rest_get_refs.py| replace:: ``rest_get_refs.py``
+.. _pathogen: https://github.com/tpope/vim-pathogen
+.. _snipMate.vim: http://www.vim.org/scripts/script.php?script_id=2540
+.. _surround.vim: https://github.com/tpope/vim-surround
