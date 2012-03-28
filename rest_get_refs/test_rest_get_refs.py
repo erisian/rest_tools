@@ -41,20 +41,6 @@ class test_RestGetRefs(object):
     def test_determine_filetype(self):
         testcases = [
             {
-                #morning pages
-                "text": u"\n".join([
-                    u"lorem ipsum",
-                    u"",
-                    u".. container:: affirmations",
-                    u"",
-                    u"something else",
-                ]),
-                "filetype": {
-                    "marker": ".. container:: affirmations",
-                    "insert": ".. container:: affirmations"
-                }
-            },
-            {
                 #blog
                 "text": u"\n".join([
                     u"lorem ipsum",
@@ -629,68 +615,6 @@ class test_RestGetRefs(object):
                     u"",
                     u".. [#] ",
                     u".. [#] ",
-                ]),
-            },
-            {
-                #Links with titles (not reST standard)
-                "text": u"\n".join([
-                    u"lorem ipsum",
-                    u"",
-                    u"lorem ^testing^",
-                    u"",
-                    u".. container:: date",
-                    u"",
-                    u"lorem ipsum",
-                    u"",
-                    u":PostID: [",
-                    u"",
-                    u"something else",
-                ]),
-                "expected": u"\n".join([
-                    u"lorem ipsum",
-                    u"",
-                    u"lorem |testing|",
-                    u"",
-                    u".. |testing| objel:: url",
-                    u"    :type: link",
-                    u"    :title: title",
-                    u".. container:: date",
-                    u"",
-                    u"lorem ipsum",
-                    u"",
-                    u":PostID: [",
-                    u"",
-                    u"something else",
-                ]),
-            },
-            {
-                #MTG cards (not reST standard)
-                "text": u"\n".join([
-                    u"lorem ipsum",
-                    u"",
-                    u"lorem ~testing~",
-                    u"",
-                    u".. container:: date",
-                    u"",
-                    u"lorem ipsum",
-                    u"",
-                    u":PostID: [",
-                    u"",
-                    u"something else",
-                ]),
-                "expected": u"\n".join([
-                    u"lorem ipsum",
-                    u"",
-                    u"lorem |testing|",
-                    u"",
-                    u".. |testing| replace:: :mtgcard:`testing`",
-                    u".. container:: date",
-                    u"",
-                    u"lorem ipsum",
-                    u"",
-                    u":PostID: [",
-                    u"",
-                    u"something else",
                 ]),
             },
         ]

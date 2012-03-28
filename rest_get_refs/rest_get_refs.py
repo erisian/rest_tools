@@ -20,7 +20,7 @@ from optparse import OptionParser
 
 class RSTReferencer(object):
 
-    config_file = "rest_get_refs.json"
+    config_files = ["rest_get_refs.json"]
     options = {}
 
     def __init__(self):
@@ -35,8 +35,10 @@ class RSTReferencer(object):
         self.write_output()
 
     def setup_config(self):
-        self.config = json.loads(open(os.path.join(os.path.dirname(__file__),
-                                                   self.config_file)).read())
+        self.config = {}
+        for f in self.config_files:
+            fp = os.path.join(os.path.dirname(__file__), f)
+            self.config.update(json.loads(open(fp).read()))
 
     def setup_cli_options(self):
         parser = OptionParser()
