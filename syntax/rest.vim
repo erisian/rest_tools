@@ -20,7 +20,8 @@ syn region restSpecialRole matchgroup=Function start=/\~/ end=/\~/ oneline conce
 syn region restInterpretedText matchgroup=restLink start=/`/ end=/`/ oneline concealends
 syn match  restLink /`[^`]\+`_\{1,2\}/
 syn region restInlineLiteral matchgroup=Constant start="``" end="``" oneline concealends
-syn match  restSectionTitle /^[=\-~`#"^\+\*\:]\{3,\}/
+syn match  restSectionTitle /^[ ]*[=\-~`#"^\+\*\:]\{3,\}$/
+syn match  restSimpleTable /^[ ]*[=]\{2,\} [= ]\+/
 syn region restComment start=/^\.\. .*/ end=/\n\S/me=e-1
 syn region restComment2 start=/^    \.\. .*/ end=/\n[ ]\{,4}\S/me=e-1
 syn region restSubstitutionSource start=/[ ]*\.\. |[^|]\+|/ end=/$/ contains=@NoSpell
@@ -83,6 +84,7 @@ highlight link restNumberFootnoteSource Repeat
 highlight link restParens Label
 highlight link restParens2 LineNr
 highlight link restSectionTitle Keyword
+highlight link restSimpleTable Constant
 highlight link restSingleQuotes Type
 highlight link restSpecialRole Function
 highlight link restStrong Structure
