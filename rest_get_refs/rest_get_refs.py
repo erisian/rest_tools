@@ -35,10 +35,12 @@ class RSTReferencer(object):
         self.write_output()
 
     def setup_config(self):
-        self.config = {}
+        self.config = {"filetypes": {}, "patterns": []}
         for f in self.config_files:
             fp = os.path.join(os.path.dirname(__file__), f)
-            self.config.update(json.loads(open(fp).read()))
+            conf = json.loads(open(fp).read())
+            self.config["filetypes"].update(conf.get("filetypes",{}))
+            self.config["patterns"] += conf.get("patterns", [])
 
     def setup_cli_options(self):
         parser = OptionParser()
