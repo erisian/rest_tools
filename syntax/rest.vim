@@ -33,7 +33,7 @@ syn match  restSymbolFootnote /\[\*\]_/
 syn region restCitationSource start=/[ ]*\.\. \[[A-z][A-z0-9_-]*\]/ end=/$/ contains=@restContained
 syn region restNumberFootnoteSource start=/[ ]*\.\. \[[0-9#]\+\]/ end=/$/ contains=@restContained
 syn region restSymbolFootnoteSource start=/[ ]*\.\. \[\*\]/ end=/$/ contains=@restContained
-syn match  restField /:[A-z][A-z0-9 	=\s\t_\-\/]*:/
+syn match  restField /:[A-z][A-z0-9 	=\s\t_\-\/;`<>\^]*:/
 syn match restListBullet /+   /
 syn match restListNumber /#.  /
 syn match restDefinitionTitle /^[A-z0-9]\{1\}.*\n[ ]\{4}\S\{1\}/me=e-5
