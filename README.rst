@@ -16,7 +16,7 @@ So that to write the following::
     -------
     I want a `“link that's quoted”`_, followed by a footnote\ [#]_, then a list:
 
-    +   Item one—verily!.
+    +   Item one—verily!
     +   Item two includes a link to |Hamlet|_.
     +   Item three includes **strength**.
     +   Item four is a tennis score: 6–3, 6–4.
@@ -28,7 +28,7 @@ I typed::
     h2<Tab>
     I want a lq<Tab>link that's quoted<Tab>, followed by a footnote;n, then a list:
 
-    i<Tab>Item one--verily.
+    i<Tab>Item one--verily!
     i<Tab>Item two includes a link to lct<Tab>Hamlet<Tab>.
     i<Tab>Item three includes s<Tab>strength<Tab>.
     i<Tab>Item four is a tennis score: 6;d3, 6;d4.
