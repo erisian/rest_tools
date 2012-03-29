@@ -71,3 +71,11 @@ function! RestHeading(char)
    return ntimes
 endfunction
 " /Expand headings
+
+" Call rest_get_refs.py
+function! RestGetReferences(rng1, rng2)
+    let path = expand("<sfile>:p:h:h") . "/rest_get_refs/rest_get_refs.py"
+    exe a:rng1 . "," . a:rng2 . "!" . path
+endfunction
+command! -range=% Grefs call RestGetReferences(<line1>, <line2>)
+" /Call rest_get_refs.py

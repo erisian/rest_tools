@@ -41,7 +41,7 @@ And to add the reference definitions at the end::
     .. _“link that's quoted”: 
     .. [#] 
 
-I just filtered the file through the |rest_get_refs.py|_ script.
+I just filtered the file through the |rest_get_refs.py|_ script by executing ``:Grefs``.
 
 Components
 ----------
@@ -69,7 +69,9 @@ I write all of my reStructuredText in Unicode, saving it as UTF-8, and frequentl
 
 ``rest_get_refs.py``
 --------------------
-This is a standalone Python file. I think it requires at least Python 2.6, although it would be fairly easy to support older versions if there were any demand. Run without arguments, it takes standard input and returns standard output. Alternatively, ``-f`` specifies a file to read from, and ``-d`` specifies a file to write to.
+This is a standalone Python file. I include a Vim command, ``Grefs``, to invoke it from within Vim. By default ``Grefs`` runs against the entire file, but it can also be run using the standard Vim ranges.
+
+It requires at least Python 2.6, although it would be fairly easy to support older versions if there were any demand. Run from the command line without arguments, it takes standard input and returns standard output. Alternatively, ``-f`` specifies a file to read from, and ``-d`` specifies a file to write to.
 
 It will look for link, footnote, substitution, and substitution/link references, and add syntax for their definitions to the end of the file. For example, given::
 
