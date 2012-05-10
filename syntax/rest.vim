@@ -37,9 +37,10 @@ syn region restSymbolFootnoteSource start=/[ ]*\.\. \[\*\]/ end=/$/ contains=@re
 syn match  restField /:[A-z][A-z0-9 	=\s\t_\-\/;`<>\^]*:/
 syn match restListBullet /+   /
 syn match restListNumber /#.  /
-syn match restDefinitionTitle /^[A-z0-9]\{1\}.*\n[ ]\{4}\S\{1\}/me=e-5
-syn match restDefinitionTitle2 /^[ ]\{4\}[A-z0-9]\{1\}.*\n[ ]\{8\}\S\{1\}/me=e-9
-syn match restDefinitionTitle3 /^[ ]\{8\}[A-z0-9]\{1\}.*\n[ ]\{12\}\S\{1\}/me=e-13
+syn match restDefinitionTitle /^[A-z0-9@\/]\{1\}.*\n[ ]\{4}\S\{1\}/me=e-5
+syn match restDefinitionTitle2 /^[ ]\{4\}[A-z0-9@\/]\{1\}.*\n[ ]\{8\}\S\{1\}/me=e-9
+syn match restDefinitionTitle3 /^[ ]\{8\}[A-z0-9@\/]\{1\}.*\n[ ]\{12\}\S\{1\}/me=e-13
+syn match restDefinitionTitle3 /^[ ]\{12\}[A-z0-9@\/]\{1\}.*\n[ ]\{16\}\S\{1\}/me=e-17
 syn region restGridTable start=/\n\n\s*+[\-=]\+.*\n/ end=/\n\s*+[\-=]\+.*\n\n/ contains=restGridTableCell
 syn match restLitLine /\s*| /
 syn match  restEmDash /—/
