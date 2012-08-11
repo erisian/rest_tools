@@ -79,3 +79,28 @@ function! RestGetReferences(rng1, rng2)
 endfunction
 command! -range=% Grefs call RestGetReferences(<line1>, <line2>)
 " /Call rest_get_refs.py
+
+" Take a definition list indented by n spaces and sort it by dt alphabetical
+" The core of this was written by Seth Milliken; I made minor tweaks to cover
+" some edge cases.
+function! SortDefinitionList(rng1, rng2)
+    let limit = match(getline(a:rng1), "[^[:space:]]")
+    let newline = "<SortDefinitionListNL>"
+    let doublenewline = "<SortDefinitionListDOUBLE>"
+    let marker = "<SortDefinitionListGROUP>"
+    let items = join(getline(a:rng1, a:rng2), newline)
+    let items = substitute(items, newline . newline, doublenewline, 'g')
+    let items = substitute(items, newline . '\ze\s\{' . limit . '}\S', marker, 'g')
+    let items = substitute(items, doublenewline, newline . newline, 'g')
+    let itemlist = split(items, marker)
+    let itemlist = sort(itemlist)
+    let result = []
+    for group in itemlist
+        call extend(result, split(group, newline))
+    endfor
+    for line in range(a:rng1, a:rng2)
+        call setline(line, result[line - a:rng1])
+    endfor
+endfun
+command! -range=% Sortdl call SortDefinitionList(<line1>, <line2>)
+" /Sort definition list
