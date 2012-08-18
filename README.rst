@@ -126,7 +126,7 @@ It will return::
 
 (Note that there must be a ``.. role:: specialrole`` line somewhere in the document before the replacement line, and that the script does not currently insert this for you.)
 
-The easiest way to use it from Vim is simply to call it as a filter, e.g. ``:%!~/.vim/bundle/rest_tools/rest_get_refs/rest_get_refs.py``
+The easiest way to use it from Vim is simply to use ``Grefs`` in the command line, but you could also call it as a filter, e.g. ``:%!~/.vim/bundle/rest_tools/rest_get_refs/rest_get_refs.py``
 
 reStructuredText Snippets
 -------------------------
