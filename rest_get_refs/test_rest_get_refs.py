@@ -594,7 +594,7 @@ class test_RestGetRefs(object):
                 ]),
             },
             {
-                #Numeric Footnotes in default document
+                # Numeric Footnotes in default document
                 "text": u"\n".join([
                     u"lorem ipsum",
                     u"",

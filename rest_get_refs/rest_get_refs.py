@@ -1,4 +1,4 @@
-#! /usr/bin/python2.6
+#! /usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 
@@ -245,8 +245,8 @@ class RSTReferencer(object):
                     curlines = []
                     endfn = None
                 else:
-                    #Have to assume that if it doesn't end a section, it just gets
-                    #added to the section.
+                    # Have to assume that if it doesn't end a section, it just
+                    # gets added to the section.
                     curlines.append(l)
 
                 return make_blocks(lns=lns, curlines=curlines, blocks=blocks,
