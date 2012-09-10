@@ -20,6 +20,11 @@ syn region restSpecialRole matchgroup=Function start=/\~/ end=/\~/ oneline conce
 syn region restInterpretedText matchgroup=restLink start=/`/ end=/`/ oneline concealends
 syn match  restLink /`[^`]\+`_\{1,2\}/
 syn region restInlineLiteral matchgroup=Constant start="``" end="``" oneline concealends
+syn region restLiteralBlock start=/^[^ ]\+.*::\zs\n/ end=/\n\ze[^ ]\{1\}/ contains=@NoSpell
+syn region restLiteralBlock2 start=/^::\zs\n/ end=/\n\ze[^ ]\{1\}/ contains=@NoSpell
+syn region restLiteralBlock3 start=/^[ ]\{4\}[^ ]\+.*::\zs\n/ end=/\n\ze[ ]\{4\}[^ ]\{1\}/ contains=@NoSpell
+syn region restLiteralBlock4 start=/^[ ]\{8\}[^ ]\+.*::\zs\n/ end=/\n\ze[ ]\{8\}[^ ]\{1\}/ contains=@NoSpell
+syn region restLiteralBlock5 start=/^[ ]\{12\}[^ ]\+.*::\zs\n/ end=/\n\ze[ ]\{12\}[^ ]\{1\}/ contains=@NoSpell
 syn match  restSectionTitle /^[ ]*[=\-~`#"^\+\*\:]\{3,\}$/
 syn match  restSimpleTable /^[ ]*[=]\{2,\} [= ]\+/
 syn region restComment start=/^\.\. .*/ end=/\n\S/me=e-1
@@ -40,7 +45,7 @@ syn match restListNumber /#.  /
 syn match restDefinitionTitle /^[A-z0-9@\/]\{1\}.*\n[ ]\{4}\S\{1\}/me=e-5
 syn match restDefinitionTitle2 /^[ ]\{4\}[A-z0-9@\/]\{1\}.*\n[ ]\{8\}\S\{1\}/me=e-9
 syn match restDefinitionTitle3 /^[ ]\{8\}[A-z0-9@\/]\{1\}.*\n[ ]\{12\}\S\{1\}/me=e-13
-syn match restDefinitionTitle3 /^[ ]\{12\}[A-z0-9@\/]\{1\}.*\n[ ]\{16\}\S\{1\}/me=e-17
+syn match restDefinitionTitle4 /^[ ]\{12\}[A-z0-9@\/]\{1\}.*\n[ ]\{16\}\S\{1\}/me=e-17
 syn region restGridTable start=/\n\n\s*+[\-=]\+.*\n/ end=/\n\s*+[\-=]\+.*\n\n/ contains=restGridTableCell
 syn match restLitLine /\s*| /
 syn match  restEmDash /—/
@@ -61,6 +66,7 @@ highlight link restComment2 Comment
 highlight link restDefinitionTitle Label
 highlight link restDefinitionTitle2 restDefinitionTitle
 highlight link restDefinitionTitle3 restDefinitionTitle
+highlight link restDefinitionTitle4 restDefinitionTitle
 highlight link restDirective Function
 highlight link restDirectiveCodeContent Function
 highlight link restDoubleQuotes String
@@ -78,6 +84,11 @@ highlight link restLinkWithTitle LineNr
 highlight link restLinkSource Keyword
 highlight link restListBullet Keyword
 highlight link restListNumber Keyword
+highlight link restLiteralBlock Constant
+highlight link restLiteralBlock2 Constant
+highlight link restLiteralBlock3 Constant
+highlight link restLiteralBlock4 Constant
+highlight link restLiteralBlock5 Constant
 highlight link restLitLine Keyword
 highlight link restMinusSign LineNr
 highlight link restNumberFootnote Repeat
