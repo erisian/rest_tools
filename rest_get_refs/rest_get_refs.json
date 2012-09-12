@@ -37,7 +37,7 @@
             "opener": "[",
             "closer": "]_",
             "false_closer": "]",
-            "reference": ".. [{content}] ",
+            "reference": ".. [{content}]  ",
             "reference_start": ".. [{content}]",
             "substitute": false
         },
