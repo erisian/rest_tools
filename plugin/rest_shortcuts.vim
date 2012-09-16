@@ -6,6 +6,8 @@ exe "au FileType " . g:restfts . " :inoremap <buffer> -- —"
 exe "au FileType " . g:restfts . " :inoremap <buffer> ;- –"
 " minus sign:
 exe "au FileType " . g:restfts . " :inoremap <buffer> ;m −"
+" multiplication sign:
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;x ×"
 " ellipsis:
 exe "au FileType " . g:restfts . " :inoremap <buffer> ;; …"
 " open double quotation:
