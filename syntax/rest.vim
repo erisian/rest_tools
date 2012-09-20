@@ -19,6 +19,7 @@ syn region restLinkWithTitle matchgroup=LineNr start=/\^/ end=/\^/ oneline conce
 syn region restSpecialRole matchgroup=Function start=/\~/ end=/\~/ oneline concealends
 syn region restInterpretedText matchgroup=restLink start=/`/ end=/`/ oneline concealends
 syn match  restLink /`[^`]\+`_\{1,2\}/
+syn match  restExplicitLink /<[^>]>/ contains=@NoSpell
 syn region restInlineLiteral matchgroup=Constant start="``" end="``" oneline concealends
 syn region restLiteralBlock start=/^[^ ]\+.*::\zs\n/ end=/\n\ze[^ ]\{1\}/ contains=@NoSpell
 syn region restLiteralBlock2 start=/^::\zs\n/ end=/\n\ze[^ ]\{1\}/ contains=@NoSpell
@@ -73,6 +74,7 @@ highlight link restDoubleQuotes String
 highlight link restEmDash Number
 highlight link restEmphasis Underlined
 highlight link restEnDash Keyword
+highlight link restExplicitLink Keyword
 highlight link restField Structure
 highlight link restFootnote Keyword
 highlight link restGridTable Conditional
