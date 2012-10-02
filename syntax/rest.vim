@@ -35,7 +35,7 @@ syn region restSubstitutionSource start=/[ ]*\.\. |[^|]\+|/ end=/$/ contains=@No
 syn match  restDirective /^[ ]*\.\.\s[A-z][A-z0-9-_]\+::/ contains=@NoSpell
 syn match  restDirectiveCodeContent /^[ ]*\.\. \(class\|container\|include\)::.*/ contains=@NoSpell
 syn region restLinkSource start=/[ ]*\.\. _.*/ end=/$/
-syn match  restCitation /\[[A-z][A-z0-9_-]*\]_/
+syn match  restCitation /\[[A-z][A-z0-9_-]*\]_/ contains=@NoSpell
 syn match  restNumberFootnote /\[[0-9#]\+\]_/
 syn match  restSymbolFootnote /\[\*\]_/
 syn region restCitationSource start=/[ ]*\.\. \[[A-z][A-z0-9_-]*\]/ end=/$/ contains=@restContained
