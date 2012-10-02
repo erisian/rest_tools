@@ -1,5 +1,7 @@
 " reST-specific settings
 :let g:restfts="rest"
+" Set filetype to rest:
+nnoremap <Leader>r :set ft=rest<CR>
 " em dash:
 exe "au FileType " . g:restfts . " :inoremap <buffer> -- —"
 " en dash:
