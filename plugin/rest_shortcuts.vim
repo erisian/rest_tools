@@ -63,6 +63,8 @@ exe "au FileType " . g:restfts . " :let b:surround_101 = '*\r*'"
 exe "au FileType " . g:restfts . " :let b:surround_108 = '`\r`_'"
 " surround script to make e.g. ysws surround a word with double asterisks (strong):
 exe "au FileType " . g:restfts . " :let b:surround_115 = '**\r**'"
+" surround script to make e.g. yswc surround a word with double backticks (code):
+exe "au FileType " . g:restfts . " :let b:surround_99 = '``\r``'"
 " /reST-specific settings
 
 " Expand headings, used with header snippets.
