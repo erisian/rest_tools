@@ -55,7 +55,7 @@ syn match  restEnDash /–/
 syn match  restMinusSign /−/
 syn region restDoubleQuotes start="“" end="”" contains=@restContained
 syn region restSingleQuotes start="‘" end="’" contains=@restContained
-syn cluster restContained contains=restEmphasis,restStrong,restLinkWithTitle,restSpecialRole,restInterpretedText,restLink,restEmDash,restEnDash,restMinusSign,restDoubleQuotes,restSingleQuotes,restBreakSpace,restSubstitutionTarget,restInlineLiteral,restNumberFootnote,restSymbolFootnote
+syn cluster restContained contains=restEmphasis,restStrong,restLinkWithTitle,restSpecialRole,restInterpretedText,restLink,restExplicitLink,restExplicitLink2,restCitation,restEmDash,restEnDash,restMinusSign,restDoubleQuotes,restSingleQuotes,restBreakSpace,restSubstitutionTarget,restInlineLiteral,restNumberFootnote,restSymbolFootnote
 syn region restParens matchgroup=restParens start="(" end=")" contains=@restContained,restParens2
 syn region restParens2 matchgroup=restParens2 start="(" end=")" contained contains=@restContained
 syn match  restEOL / $/ containedin=ALL
