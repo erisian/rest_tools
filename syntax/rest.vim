@@ -19,7 +19,7 @@ syn region restLinkWithTitle matchgroup=LineNr start=/\^/ end=/\^/ oneline conce
 syn region restSpecialRole matchgroup=Function start=/\~/ end=/\~/ oneline concealends
 syn region restInterpretedText matchgroup=restLink start=/`/ end=/`/ oneline concealends
 syn match  restLink /`[^`]\+`_\{1,2\}/
-syn match  restExplicitLink /[a-z]\+\:\/\/[^ ]\+/ contains=@NoSpell
+syn match  restExplicitLink /[a-z]\+\:\/\/[^ ^\]]\+/ contains=@NoSpell
 syn match  restExplicitLink2 /<[^>]\+>/ms=s+1,me=e-1 contains=@NoSpell
 syn region restInlineLiteral matchgroup=Constant start="``" end="``" oneline concealends
 syn region restLiteralBlock start=/^[^ ]\+.*::\zs\n/ end=/\n\ze[^ ]\{1\}/ contains=@NoSpell
