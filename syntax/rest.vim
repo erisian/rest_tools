@@ -24,9 +24,9 @@ syn match  restExplicitLink2 /<[^>]\+>/ms=s+1,me=e-1 contains=@NoSpell
 syn region restInlineLiteral matchgroup=Constant start="``" end="``" oneline concealends
 syn region restLiteralBlock start=/^[^ ]\+.*::\zs\n/ end=/\n\ze[^ ]\{1\}/ contains=@NoSpell
 syn region restLiteralBlock2 start=/^::\zs\n/ end=/\n\ze[^ ]\{1\}/ contains=@NoSpell
-syn region restLiteralBlock3 start=/^[ ]\{4\}[^ ]\+.*::\zs\n/ end=/\n\ze[ ]\{4\}[^ ]\{1\}/ contains=@NoSpell
-syn region restLiteralBlock4 start=/^[ ]\{8\}[^ ]\+.*::\zs\n/ end=/\n\ze[ ]\{8\}[^ ]\{1\}/ contains=@NoSpell
-syn region restLiteralBlock5 start=/^[ ]\{12\}[^ ]\+.*::\zs\n/ end=/\n\ze[ ]\{12\}[^ ]\{1\}/ contains=@NoSpell
+syn region restLiteralBlock3 start=/^[ ]\{4\}[^ ]*.*::\zs\n/ end=/\n\ze[ ]\{0,4\}[^ ]\{1\}/ contains=@NoSpell
+syn region restLiteralBlock4 start=/^[ ]\{8\}[^ ]*.*::\zs\n/ end=/\n\ze[ ]\{0,8\}[^ ]\{1\}/ contains=@NoSpell
+syn region restLiteralBlock5 start=/^[ ]\{12\}[^ ]*.*::\zs\n/ end=/\n\ze[ ]\{0,12\}[^ ]\{1\}/ contains=@NoSpell
 syn match  restSectionTitle /^[ ]*[=\-~`#"^\+\*\:]\{3,\}$/
 syn match  restSimpleTable /^[ ]*[=]\{2,\} [= ]\+/
 syn region restComment start=/^\.\. .*/ end=/\n\S/me=e-1
