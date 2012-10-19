@@ -21,7 +21,7 @@ syn region restInterpretedText matchgroup=restLink start=/`/ end=/`/ oneline con
 syn match  restLink /`[^`]\+`_\{1,2\}/
 syn match  restExplicitLink /[a-z]\+\:\/\/[^ ^\]]\+/ contains=@NoSpell
 syn match  restExplicitLink2 /<[^>]\+>/ms=s+1,me=e-1 contains=@NoSpell
-syn region restInlineLiteral matchgroup=Constant start="``" end="``" oneline concealends
+syn region restInlineLiteral matchgroup=Constant start="``" end="``" oneline concealends contains=@NoSpell
 syn region restLiteralBlock start=/^[^ ]\+.*::\zs\n/ end=/\n\ze[^ ]\{1\}/ contains=@NoSpell
 syn region restLiteralBlock2 start=/^::\zs\n/ end=/\n\ze[^ ]\{1\}/ contains=@NoSpell
 syn region restLiteralBlock3 start=/^[ ]\{4\}[^ ]*.*::\zs\n/ end=/\n\ze[ ]\{0,4\}[^ ]\{1\}/ contains=@NoSpell
