@@ -179,11 +179,12 @@ This is a sample of how it looks with my color scheme and ``conceallevel=0``:
 
 Unicode Snippets
 ----------------
-====== ===============================
+====== ==========================================================
 ``q``  Double quotation marks: ``“”``.
 ``Q``  Single quotation marks: ``‘’``.
 ``rx`` ℞.
-====== ===============================
+``ht`` Variable, prime, space, variable, double prime: ``5′ 11″``
+====== ==========================================================
 
 Unicode Shortcuts
 -----------------
@@ -194,6 +195,7 @@ These are all insert mode shortcuts.
 ``;-`` en dash: ``–``.
 ``;d`` en dash: ``–``
 ``;m`` minus sign: ``−``
+``;x`` multiplication sign: ``×``
 ``;;`` ellipsis: ``…``
 ``;q`` open double quotation: ``“``
 
