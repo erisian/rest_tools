@@ -52,6 +52,7 @@ syn region restGridTable start=/\n\n\s*+[\-=]\+.*\n/ end=/\n\s*+[\-=]\+.*\n\n/ c
 syn match restLitLine /\s*| /
 syn match  restEmDash /—/
 syn match  restEnDash /–/
+syn match  restQuotationDash /―/
 syn match  restMinusSign /−/
 syn region restDoubleQuotes start="“" end="”" contains=@restContained
 syn region restSingleQuotes start="‘" end="’" contains=@restContained
@@ -99,6 +100,7 @@ highlight link restNumberFootnote Type
 highlight link restNumberFootnoteSource restNumberFootnote
 highlight link restParens Label
 highlight link restParens2 LineNr
+highlight link restQuotationDash Boolean
 highlight link restSectionTitle Keyword
 highlight link restSimpleTable Constant
 highlight link restSingleQuotes Repeat
