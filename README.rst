@@ -195,6 +195,7 @@ These are all insert mode shortcuts.
 ``;-`` en dash: ``–``.
 ``;d`` en dash: ``–``
 ``;m`` minus sign: ``−``
+``;h`` horizontal dash: ``―``
 ``;x`` multiplication sign: ``×``
 ``;;`` ellipsis: ``…``
 ``;q`` open double quotation: ``“``
