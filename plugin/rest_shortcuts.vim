@@ -8,6 +8,8 @@ exe "au FileType " . g:restfts . " :inoremap <buffer> -- —"
 exe "au FileType " . g:restfts . " :inoremap <buffer> ;- –"
 " minus sign:
 exe "au FileType " . g:restfts . " :inoremap <buffer> ;m −"
+" horizontal dash:
+exe "au FileType " . g:restfts . " :inoremap <buffer> ;h ―"
 " multiplication sign:
 exe "au FileType " . g:restfts . " :inoremap <buffer> ;x ×"
 " ellipsis:
